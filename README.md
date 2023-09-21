@@ -8,9 +8,12 @@ README.md
 
 # คำแนะนำก่อน Download
 
-> สามารถดาวโหลดไปลงเล่นกันได้ตสมปกติเลย 
+> สามารถดาวโหลดไปลงเล่นกันได้ตสมปกติเลย
+> 
 > แน่นอนนี้เป็ฯการ แจกให้ไปเล่นกันฟรีๆเลย
+> 
 > ระบบเซิฟที่ใช้เล่น Sleeplite Junior chapter ไม่ว่าจะเป็น รวบรวม แก้ไข้ และ สร้างขึ้นมาเองอีกด้วย
+> 
 > ถ้าอยากสนับสนุน ก็ เข้ามาที่ Discord ได้เลย
 
 ## 
@@ -28,31 +31,51 @@ README.md
 > File zip 868 Mb
 
 # Behavior Packs
+
 > Advanced Fishing
+> 
 > Ckunck Loader
+> 
 > Craft Recipes
+> 
 > Extra Chests
+> 
 > Head player
+> 
 > Health Point
+> 
 > SitDown B_update
+> 
 > Sleeplite Data
 
 # Resource Packs
+
 > Advanced Fishing
+> 
 > Ckunck Loader
+> 
 > Custom NPC
+> 
 > Extra Chests
+> 
 > Floating text RES
+> 
 > Head Player
+> 
 > Item magnet
+> 
 > SitDown R_update
-> Super Tables 
+> 
+> Super Tables
+> 
 > Server
 
 # Download now ꜱʟᴇᴇᴘʟɪᴛᴇ ᴊᴜɴɪᴏʀ ᴄʜᴀᴘᴛᴇʀ ᴏɴᴇ 1.20.15
 
 [Download World Pack 868 mb ](https://drive.google.com/file/d/1GWXlllOmii6OFKTKxKBZf5UWuFPMenM7/view?usp=sharing)
+
 [Download Resource Packs 4.33 mb](https://www.mediafire.com/file/q5v8a0nxz00y9eh/behavior_packs.zip/file)
+
 [Download Resource Packs 51.6 mb](https://www.mediafire.com/file/gea64uic2lwmixj/resource_packs.zip/file)
 
 ![](https://cdn.discordapp.com/attachments/1018330493575508078/1154401434712940564/Screenshot_67.png)
