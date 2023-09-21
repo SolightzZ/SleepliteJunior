@@ -72,7 +72,7 @@ README.md
 
 # Download now ꜱʟᴇᴇᴘʟɪᴛᴇ ᴊᴜɴɪᴏʀ ᴄʜᴀᴘᴛᴇʀ ᴏɴᴇ 1.20.15
 
-[Download World Pack 868.59 mb ]([https://drive.google.com/file/d/1GWXlllOmii6OFKTKxKBZf5UWuFPMenM7/view?usp=sharing)
+[Download World Pack 868.59 mb ](https://www.mediafire.com/file/p4mfvbi8xucv1dm/junior_map.zip/file)
 
 [Download Resource Packs 4.33 mb](https://www.mediafire.com/file/q5v8a0nxz00y9eh/behavior_packs.zip/file)
 
