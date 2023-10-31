@@ -74,7 +74,7 @@ README.md
 
 [Download World Pack 930.32 mb ](https://www.mediafire.com/file/ak457fh09olzpwo/junior_31_10_2023.zip/file)
 
-[Download Resource Packs 4.33 mb](https://www.mediafire.com/file/q5v8a0nxz00y9eh/behavior_packs.zip/file)
+[Download behavior packs 4.33 mb](https://www.mediafire.com/file/q5v8a0nxz00y9eh/behavior_packs.zip/file)
 
 [Download Resource Packs 51.6 mb](https://www.mediafire.com/file/gea64uic2lwmixj/resource_packs.zip/file)
 
