@@ -3,7 +3,7 @@ README.md
 
  ![](https://media.discordapp.net/attachments/1084301111177007155/1154383489836253246/All_sleepLite_JR.2png.png?width=1440&height=602)
 
-# ꜱʟᴇᴇᴘʟɪᴛᴇ ᴊᴜɴɪᴏʀ ᴄʜᴀᴘᴛᴇʀ ᴏɴᴇ ᴇɴᴅɪɴɢ 17/9/2023
+# ꜱʟᴇᴇᴘʟɪᴛᴇ ᴊᴜɴɪᴏʀ ᴄʜᴀᴘᴛᴇʀ ᴏɴᴇ ᴇɴᴅɪɴɢ 31/10/2023
 ![](https://cdn.discordapp.com/attachments/1018330493575508078/1154397601618206790/Screenshot_42.png)
 
 # คำแนะนำก่อน Download
@@ -70,7 +70,7 @@ README.md
 > 
 > Server
 
-# Download now ꜱʟᴇᴇᴘʟɪᴛᴇ ᴊᴜɴɪᴏʀ ᴄʜᴀᴘᴛᴇʀ ᴏɴᴇ 1.20.15
+# Download now ꜱʟᴇᴇᴘʟɪᴛᴇ ᴊᴜɴɪᴏʀ ᴄʜᴀᴘᴛᴇʀ ᴏɴᴇ 1.20.40+
 
 [Download World Pack 930.32 mb ](https://www.mediafire.com/file/ak457fh09olzpwo/junior_31_10_2023.zip/file)
 
