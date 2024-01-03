@@ -1,0 +1,96 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.normal_chest.basic": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"idle"
+					],
+					"transitions": [
+						{
+							"opening": "query.property('property:is_opened')"
+						},
+						{
+							"paperclips_success": "query.property('property:using_paperclips')&&query.property('property:is_success')"
+						},
+						{
+							"paperclips_failed": "query.property('property:using_paperclips')&&!(query.property('property:is_success'))"
+						},
+						{
+							"bamboo_crawler_success": "query.property('property:using_bamboo_crawler')&&query.property('property:is_success')"
+						},
+						{
+							"bamboo_crawler_failed": "query.property('property:using_bamboo_crawler')&&!(query.property('property:is_success'))"
+						}
+					]
+				},
+				"opening": {
+					"animations": [
+						"opening"
+					],
+					"transitions": [
+						{
+							"closing": "query.any_animation_finished&&!query.property('property:is_opened')"
+						}
+					]
+				},
+				"closing": {
+					"animations": [
+						"closing"
+					],
+					"transitions": [
+						{
+							"default": "query.any_animation_finished"
+						}
+					]
+				},
+				"paperclips_success": {
+					"animations": [
+						"paperclips_success"
+					],
+					"transitions": [
+						{
+							"default": "!query.property('property:using_paperclips')"
+						}
+					],
+					"blend_transition": 0
+				},
+				"paperclips_failed": {
+					"animations": [
+						"paperclips_failed"
+					],
+					"transitions": [
+						{
+							"default": "!query.property('property:using_paperclips')"
+						}
+					],
+					"blend_transition": 0
+				},
+				"bamboo_crawler_success": {
+					"animations": [
+						"bamboo_crawler_success"
+					],
+					"transitions": [
+						{
+							"default": "!query.property('property:using_bamboo_crawler')"
+						}
+					],
+					"blend_transition": 0
+				},
+				"bamboo_crawler_failed": {
+					"animations": [
+						"bamboo_crawler_failed"
+					],
+					"transitions": [
+						{
+							"default": "!query.property('property:using_bamboo_crawler')"
+						}
+					],
+					"blend_transition": 0
+				}
+			}
+		}
+	}
+}

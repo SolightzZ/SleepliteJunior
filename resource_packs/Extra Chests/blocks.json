@@ -1,0 +1,35 @@
+{
+	"format_version": [
+		1,
+		1,
+		0
+	],
+	"capacity:transparent_block": {
+		"sound": "wood",
+		"textures": "transparent_block_texture"
+	},
+	"extra_chests:normal_copper_chest_block": {
+		"sound": "wood",
+		"textures": "copper_chest_texture"
+	},
+	"extra_chests:normal_iron_chest_block": {
+		"sound": "wood",
+		"textures": "iron_chest_texture"
+	},
+	"extra_chests:normal_gold_chest_block": {
+		"sound": "wood",
+		"textures": "gold_chest_texture"
+	},
+	"extra_chests:normal_diamond_chest_block": {
+		"sound": "wood",
+		"textures": "diamond_chest_texture"
+	},
+	"extra_chests:normal_emerald_chest_block": {
+		"sound": "wood",
+		"textures": "emerald_chest_texture"
+	},
+	"extra_chests:normal_netherite_chest_block": {
+		"sound": "wood",
+		"textures": "nehterite_chest_texture"
+	}
+}

@@ -1,0 +1,52 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"authors": [
+			"The Brothers"
+		],
+		"generated_with": {
+			"bridge": [
+				"2.6.1"
+			],
+			"dash": [
+				"0.10.10"
+			]
+		}
+	},
+	"header": {
+		"name": "Extra Chests",
+		"description": "Extra Chests Pack [RP]. It's a new Minecraft chests addon for pocket, Desktop and console Edition. It support only 1.19.30 and above. Every chest have it's unique UI Texture and custom open & close animation with sounds. It contain Copper, Iron, Gold, Emerald, Diamond, Netherite chests.All chests are lockable and can be breaked wth custom items using a random chance.",
+		"min_engine_version": [
+			1,
+			19,
+			30
+		],
+		"uuid": "2eb8dfdb-94af-4d31-9a8c-28528293cffe",
+		"version": [
+			1,
+			0,
+			0
+		]
+	},
+	"modules": [
+		{
+			"type": "resources",
+			"uuid": "804c0c8a-5a89-48a4-8cbf-8f716d56d957",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "7d99e171-29eb-4a9d-860d-b4f702d105a3",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	]
+}

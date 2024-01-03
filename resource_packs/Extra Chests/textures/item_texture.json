@@ -1,0 +1,36 @@
+{
+	"resource_pack_name": "extra_chests",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"copper_lock": {
+			"textures": "textures/items/copper_lock"
+		},
+		"paperclip": {
+			"textures": "textures/items/paperclip"
+		},
+		"bamboo_crawler": {
+			"textures": "textures/items/bamboo_crawler"
+		},
+		"rope": {
+			"textures": "textures/items/rope"
+		},
+		"robust_bamboo": {
+			"textures": "textures/items/robust_bamboo"
+		},
+		"packed_bamboo": {
+			"textures": "textures/items/packed_bamboo"
+		},
+		"lock_piece": {
+			"textures": "textures/items/lock_piece"
+		},
+		"chest_locker": {
+			"textures": "textures/items/chest_locker"
+		},
+		"iron_lock": {
+			"textures": "textures/items/iron_lock"
+		},
+		"gold_lock": {
+			"textures": "textures/items/gold_lock"
+		}
+	}
+}

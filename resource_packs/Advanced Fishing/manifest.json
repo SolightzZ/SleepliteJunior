@@ -1,0 +1,30 @@
+{
+	"format_version" : 2,
+	"header" : {
+		"description" : "Fishes That Based On §bBiomes, §dDimensions §f& §eResources §fTo Make Fishing §cUseful Than Ever!",
+		"name" : "Advanced Fishing BE §dV7 §eRP§r",
+		"uuid" : "621d6b11-04f3-49ec-aa88-fc4cb41d9730",
+		"version" : [ 7, 0, 0 ],
+		"min_engine_version" : [ 1, 17, 0 ]
+	},
+	"modules" : [
+		{
+			"description" : "Fishes That Based On §bBiomes, §dDimensions §f& §eResources §fTo Make Fishing §cUseful Than Ever!",
+			"type" : "resources",
+			"uuid" : "2146f9b3-6edd-4a6e-a0c7-c7e02c4c96b9",
+			"version" : [ 7, 0, 0 ]
+		}
+	],
+	"subpacks" : [
+		{
+			"folder_name" : "advc",
+			"name" : "Integrated With §bAzure Culture",
+			"memory_tier" : 0
+		},
+		{
+			"folder_name" : "empty",
+			"name" : "No Integration",
+			"memory_tier" : 1
+		}
+	]
+}

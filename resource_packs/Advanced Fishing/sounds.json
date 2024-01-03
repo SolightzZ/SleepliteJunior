@@ -1,0 +1,13 @@
+{
+	"entity_sounds" : {
+		"entities" : {
+			"adv:blazing_hook" : {
+				"events" : {
+					"death" : "mob.fish.hurt"
+				},
+				"pitch" : [ 0.80, 1.20 ],
+				"volume" : 0.0
+			}
+		}
+	}
+}

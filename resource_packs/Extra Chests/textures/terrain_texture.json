@@ -1,0 +1,29 @@
+{
+	"num_mip_levels": 4,
+	"padding": 8,
+	"resource_pack_name": "extra_chests",
+	"texture_name": "atlas.terrain",
+	"texture_data": {
+		"copper_chest_texture": {
+			"textures": "textures/blocks/copper_normal_chest"
+		},
+		"iron_chest_texture": {
+			"textures": "textures/blocks/iron_normal_chest"
+		},
+		"gold_chest_texture": {
+			"textures": "textures/blocks/gold_normal_chest"
+		},
+		"diamond_chest_texture": {
+			"textures": "textures/blocks/diamond_normal_chest"
+		},
+		"emerald_chest_texture": {
+			"textures": "textures/blocks/emerald_normal_chest"
+		},
+		"nehterite_chest_texture": {
+			"textures": "textures/blocks/netherite_normal_chest"
+		},
+		"transparent_block_texture": {
+			"textures": "textures/blocks/transparent_block_texture"
+		}
+	}
+}

@@ -1,0 +1,49 @@
+{
+	"format_version": "1.19.30",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "extra_chests:normal_diamond_chest_shape",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/blocks/diamond_normal_chest"
+			},
+			"animations": {
+				"basic_controller": "controller.animation.normal_chest.basic",
+				"opening": "animation.normal_chest.opening",
+				"closing": "animation.normal_chest.closing",
+				"idle": "animation.normal_chest.idle",
+				"paperclips_success": "animation.normal_chest.paperclips.success",
+				"paperclips_failed": "animation.normal_chest.paperclips.failed",
+				"bamboo_crawler_success": "animation.normal_chest.bamboo_crawler.success",
+				"bamboo_crawler_failed": "animation.normal_chest.bamboo_crawler.failed"
+			},
+			"scripts": {
+				"animate": [
+					"basic_controller"
+				]
+			},
+			"geometry": {
+				"default": "geometry.normal_chest"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"spawn_egg": {
+				"base_color": "#0000FF",
+				"overlay_color": "#FF00FF"
+			},
+			"sound_effects": {
+				"add_lock": "add_lock",
+				"chest_wood_impact": "chest_wood_impact",
+				"bamboo_crawler_hit_chest": "bamboo_crawler_hit_chest",
+				"lock_opened": "lock_opened",
+				"lock_picking": "lock_picking",
+				"chest_break": "chest_break",
+				"paperclips_break": "paperclips_break",
+				"bamboo_crawler_break": "bamboo_crawler_break"
+			}
+		}
+	}
+}

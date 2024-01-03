@@ -1,0 +1,138 @@
+{
+  "resource_pack_name": "vanilla",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "blazing_fishing_pole": {
+      "textures": "textures/items/blazing_fishing_pole"
+    },
+    "abyssal_lurker": {
+      "textures": "textures/items/abyssal_lurker"
+    },
+    "angelfish": {
+      "textures": "textures/items/angelfish"
+    },
+    "angler_fish": {
+      "textures": "textures/items/angler_fish"
+    },
+    "blaze_pike": {
+      "textures": "textures/items/blaze_pike"
+    },
+    "bonefish": {
+      "textures": "textures/items/bonefish"
+    },
+    "brown_shroomfin": {
+      "textures": "textures/items/brown_shroomfin"
+    },
+    "catfish": {
+      "textures": "textures/items/catfish"
+    },
+    "cave_trout": {
+      "textures": "textures/items/cave_trout"
+    },
+    "charged_bullhead": {
+      "textures": "textures/items/charged_bullhead"
+    },
+    "chorus_koi": {
+      "textures": "textures/items/chorus_koi"
+    },
+    "crystal_mullet": {
+      "textures": "textures/items/crystal_mullet"
+    },
+    "cursed_koi": {
+      "textures": "textures/items/cursed_koi"
+    },
+    "ender_shad": {
+      "textures": "textures/items/ender_shad"
+    },
+    "explosive_crucian": {
+      "textures": "textures/items/explosive_crucian"
+    },
+    "flarefin_koi": {
+      "textures": "textures/items/flarefin_koi"
+    },
+    "frost_minnow": {
+      "textures": "textures/items/frost_minnow"
+    },
+    "fungi_catfish": {
+      "textures": "textures/items/fungi_catfish"
+    },
+    "glacier_anchovy": {
+      "textures": "textures/items/glacier_anchovy"
+    },
+    "golden_koi": {
+      "textures": "textures/items/golden_koi"
+    },
+    "green_jellyfish": {
+      "textures": "textures/items/green_jellyfish"
+    },
+    "jellyfish": {
+      "textures": "textures/items/jellyfish"
+    },
+    "magikarp": {
+      "textures": "textures/items/magikarp"
+    },
+    "magma_jellyfish": {
+      "textures": "textures/items/magma_jellyfish"
+    },
+    "mandarinfish": {
+      "textures": "textures/items/mandarinfish"
+    },
+    "mud_tuna": {
+      "textures": "textures/items/mud_tuna"
+    },
+    "nether_sturgeon": {
+      "textures": "textures/items/nether_sturgeon"
+    },
+    "obsidian_bream": {
+      "textures": "textures/items/obsidian_bream"
+    },
+    "pearl_sardine": {
+      "textures": "textures/items/pearl_sardine"
+    },
+    "pike": {
+      "textures": "textures/items/pike"
+    },
+    "piranha": {
+      "textures": "textures/items/piranha"
+    },
+    "quartz_chub": {
+      "textures": "textures/items/quartz_chub"
+    },
+    "red_shroomfin": {
+      "textures": "textures/items/red_shroomfin"
+    },
+    "ruffe": {
+      "textures": "textures/items/ruffe"
+    },
+    "sandy_bass": {
+      "textures": "textures/items/sandy_bass"
+    },
+    "snowy_walleye": {
+      "textures": "textures/items/snowy_walleye"
+    },
+    "sparkling_eel": {
+      "textures": "textures/items/sparkling_eel"
+    },
+    "specular_snapper": {
+      "textures": "textures/items/specular_snapper"
+    },
+    "sponge_eater": {
+      "textures": "textures/items/sponge_eater"
+    },
+    "spookyfin": {
+      "textures": "textures/items/spookyfin"
+    },
+    "squid": {
+      "textures": "textures/items/squid"
+    },
+    "sunfish": {
+      "textures": "textures/items/sunfish"
+    },
+    "swamp_plaice": {
+      "textures": "textures/items/swamp_plaice"
+    },
+    "withered_crucian": {
+      "textures": "textures/items/withered_crucian"
+    }
+  }
+}

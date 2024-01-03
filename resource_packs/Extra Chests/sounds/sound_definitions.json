@@ -1,0 +1,53 @@
+{
+	"format_version": "1.14.0",
+	"sound_definitions": {
+		"add_lock": {
+			"sounds": [
+				"sounds/chest/add_lock"
+			],
+			"max_distance": 20
+		},
+		"chest_wood_impact": {
+			"sounds": [
+				"sounds/chest/chest_wood_impact"
+			],
+			"max_distance": 20
+		},
+		"bamboo_crawler_break": {
+			"sounds": [
+				"sounds/chest/bamboo_crawler_break"
+			],
+			"max_distance": 20
+		},
+		"bamboo_crawler_hit_chest": {
+			"sounds": [
+				"sounds/chest/bamboo_crawler_hit_chest"
+			],
+			"max_distance": 20
+		},
+		"lock_opened": {
+			"sounds": [
+				"sounds/chest/lock_opened"
+			],
+			"max_distance": 20
+		},
+		"lock_picking": {
+			"sounds": [
+				"sounds/chest/lock_picking"
+			],
+			"max_distance": 10
+		},
+		"chest_break": {
+			"sounds": [
+				"sounds/chest/chest_break"
+			],
+			"max_distance": 32
+		},
+		"paperclips_break": {
+			"sounds": [
+				"sounds/chest/paperclips_break"
+			],
+			"max_distance": 20
+		}
+	}
+}

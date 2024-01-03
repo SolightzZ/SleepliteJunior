@@ -1,0 +1,17 @@
+----- v1.1 -----
+
+-Added new sizes : 16x, 32x, 64x, 128x and 256x.
+-Players are automatically teleported inside world borders if they escape world borders.
+-World border block (barriers and stained glass) placement is refreshed every 2 seconds (instead of each tick). It's reduce lags for low-end devices.
+-[Bug Fixed] World borders now generate properly in the Nether.
+
+
+----- v1.0 -----
+
+-Added world border like blocks inside a specified square area, in order to make a "limited" world size.
+-World border blocks are barriers, and stained glass (gray) behind.
+-Exists for different sizes : 512x, 1024x, 2048x, 4096x, 10000x and 20000x.
+
+Main problems (But fixed in v1.1) :
+-World border generation caused a lot of lags for low-end devices because every blocks (for world borders) are replaced every ticks.
+-World borders didn't generated in Nether.

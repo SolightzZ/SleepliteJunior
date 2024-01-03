@@ -1,0 +1,24 @@
+tile.extra_chests:normal_diamond_chest_block.name=§bDiamond §r§fChest
+tile.extra_chests:normal_emerald_chest_block.name=§2Emerald §r§fChest
+tile.extra_chests:normal_netherite_chest_block.name=§0Netherite §r§fChest
+tile.extra_chests:normal_iron_chest_block.name=§7Iron §r§fChest
+tile.extra_chests:normal_copper_chest_block.name=§cCopper §r§fChest
+tile.extra_chests:normal_gold_chest_block.name=§6Gold §r§fChest
+
+entity.extra_chests:normal_copper_chest.name=§cCopper §r§fChest
+entity.extra_chests:normal_iron_chest.name=§7Iron §r§fChest
+entity.extra_chests:normal_gold_chest.name=§6Gold §r§fChest
+entity.extra_chests:normal_emerald_chest.name=§2Emerald §r§fChest
+entity.extra_chests:normal_diamond_chest.name=§bDiamond §r§fChest
+entity.extra_chests:normal_netherite_chest.name=§0Netherite §r§fChest
+
+item.extra_chests:bamboo_crawler=Bamboo Crawler
+item.extra_chests:gold_lock=Gold Lock
+item.extra_chests:lock_piece=Lock Piece
+item.extra_chests:packed_bamboo=Packed Bamboo
+item.extra_chests:paperclip=Paperclip
+item.extra_chests:robust_bamboo=Robust Bamboo
+item.extra_chests:rope=Rope
+item.extra_chests:chest_locker=Chest Locker
+item.extra_chests:copper_lock=Copper Lock
+item.extra_chests:iron_lock=Iron Lock

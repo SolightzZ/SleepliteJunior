@@ -1,0 +1,75 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "This Addon add world borders to your Map, you have the choice between a lot of different world size.",
+        "name": "Worldborder Addon - 1.1",
+        "uuid": "e15120e1-233a-44d6-b539-c68f9c4d0010",
+        "version": [1, 1, 0],
+        "min_engine_version": [1, 14, 0]
+    },
+    "modules": [
+        {
+            "description": "Worldborder Addon - 1.1",
+            "type": "data",
+            "uuid": "f17cf249-bd53-40fb-bdc9-09b61b450010",
+            "version": [1, 1, 0]
+        }
+    ],
+    "subpacks": [
+    {
+      "folder_name": "worldborder-16",
+      "name": "Worldborder §l§716x16 blocks§r (One Chunk Map)",
+      "memory_tier": 1
+    },
+    {
+      "folder_name": "worldborder-32",
+      "name": "Worldborder §l§d32x32 blocks§r (for special Map)",
+      "memory_tier": 2
+    },
+    {
+      "folder_name": "worldborder-64",
+      "name": "Worldborder §l§d64x64 blocks§r (for special Map)",
+      "memory_tier": 3
+    },
+    {
+      "folder_name": "worldborder-128",
+      "name": "Worldborder §l§c128x128 blocks§r (good for PvP Map)",
+      "memory_tier": 4
+    },
+    {
+      "folder_name": "worldborder-256",
+      "name": "Worldborder §l§c256x256 blocks§r (good for PvP Map)",
+      "memory_tier": 5
+    },
+    {
+      "folder_name": "worldborder-512",
+      "name": "Worldborder §l§e512x512 blocks§r (good for UHC Map)",
+      "memory_tier": 6
+    },
+    {
+      "folder_name": "worldborder-1024",
+      "name": "Worldborder §l§e1024x1024 blocks§r (good for UHC Map)",
+      "memory_tier": 7
+    },
+    {
+      "folder_name": "worldborder-2048",
+      "name": "Worldborder §l§a2048x2048 blocks§r (good for small server)",
+      "memory_tier": 8
+    },
+    {
+      "folder_name": "worldborder-4096",
+      "name": "Worldborder §l§a4096x4096 blocks§r (good for small server)",
+      "memory_tier": 9
+    },
+    {
+      "folder_name": "worldborder-10000",
+      "name": "Worldborder §l§b10000x10000 blocks§r (good for big server)",
+      "memory_tier": 10
+    },
+    {
+      "folder_name": "worldborder-20000",
+      "name": "Worldborder §l§b20000x20000 blocks§r (good for big server)",
+      "memory_tier": 11
+    }
+    ]
+}
