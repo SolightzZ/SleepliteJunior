@@ -1,0 +1,17 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "extra_chests:iron_lock",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "iron_lock"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			}
+		}
+	}
+}

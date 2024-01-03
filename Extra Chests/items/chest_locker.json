@@ -1,0 +1,17 @@
+{
+	"format_version": "1.19.30",
+	"minecraft:item": {
+		"description": {
+			"identifier": "extra_chests:chest_locker",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "chest_locker"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			}
+		}
+	}
+}

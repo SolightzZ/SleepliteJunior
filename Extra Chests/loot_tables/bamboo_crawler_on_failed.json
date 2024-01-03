@@ -1,0 +1,231 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "minecraft:copper_ingot",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 0,
+								"max": 3
+							}
+						}
+					],
+					"weight": 1
+				},
+				{
+					"type": "empty",
+					"weight": 1
+				}
+			]
+		},
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "extra_chests:robust_bamboo",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 0,
+								"max": 2
+							}
+						}
+					],
+					"weight": 1
+				},
+				{
+					"type": "item",
+					"name": "minecraft:bamboo",
+					"pools": [
+						{
+							"rolls": 1,
+							"entries": [
+								{
+									"type": "item",
+									"name": "extra_chests:packed_bamboo",
+									"functions": [
+										{
+											"function": "set_count",
+											"count": {
+												"min": 0,
+												"max": 6
+											}
+										}
+									],
+									"weight": 1
+								},
+								{
+									"type": "item",
+									"name": "extra_chests:packed_bamboo",
+									"functions": [
+										{
+											"function": "set_count",
+											"count": {
+												"min": 0,
+												"max": 3
+											}
+										}
+									],
+									"weight": 1
+								},
+								{
+									"type": "item",
+									"weight": 1,
+									"name": "minecraft:bamboo",
+									"pools": [
+										{
+											"rolls": 1,
+											"entries": [
+												{
+													"type": "item",
+													"name": "minecraft:bamboo",
+													"functions": [
+														{
+															"function": "set_count",
+															"count": {
+																"min": 0,
+																"max": 36
+															}
+														}
+													],
+													"weight": 1
+												},
+												{
+													"type": "item",
+													"name": "minecraft:bamboo",
+													"functions": [
+														{
+															"function": "set_count",
+															"count": {
+																"min": 0,
+																"max": 18
+															}
+														}
+													],
+													"weight": 1
+												},
+												{
+													"type": "item",
+													"name": "minecraft:bamboo",
+													"functions": [
+														{
+															"function": "set_count",
+															"count": {
+																"min": 0,
+																"max": 6
+															}
+														}
+													],
+													"weight": 2
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"rolls": 1,
+							"entries": [
+								{
+									"type": "item",
+									"name": "extra_chests:rope",
+									"functions": [
+										{
+											"function": "set_count",
+											"count": {
+												"min": 0,
+												"max": 6
+											}
+										}
+									],
+									"weight": 1
+								},
+								{
+									"type": "item",
+									"name": "extra_chests:rope",
+									"functions": [
+										{
+											"function": "set_count",
+											"count": {
+												"min": 0,
+												"max": 12
+											}
+										}
+									],
+									"weight": 1
+								},
+								{
+									"type": "item",
+									"name": "extra_chests:rope",
+									"functions": [
+										{
+											"function": "set_count",
+											"count": {
+												"min": 0,
+												"max": 2
+											}
+										}
+									],
+									"weight": 1
+								},
+								{
+									"type": "item",
+									"weight": 1,
+									"name": "minecraft:string",
+									"pools": [
+										{
+											"rolls": 1,
+											"entries": [
+												{
+													"type": "item",
+													"name": "minecraft:string",
+													"functions": [
+														{
+															"function": "set_count",
+															"count": {
+																"min": 0,
+																"max": 36
+															}
+														}
+													],
+													"weight": 1
+												},
+												{
+													"type": "item",
+													"name": "minecraft:string",
+													"functions": [
+														{
+															"function": "set_count",
+															"count": {
+																"min": 0,
+																"max": 8
+															}
+														}
+													],
+													"weight": 2
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					],
+					"weight": 1
+				},
+				{
+					"type": "empty",
+					"weight": 1
+				}
+			]
+		}
+	]
+}

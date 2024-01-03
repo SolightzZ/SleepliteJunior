@@ -1,0 +1,17 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "extra_chests:gold_lock",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "gold_lock"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			}
+		}
+	}
+}

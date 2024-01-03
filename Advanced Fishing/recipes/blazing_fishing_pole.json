@@ -1,0 +1,31 @@
+{
+    "format_version": "1.16.221",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "adv:blazing_fishing_pole"
+        },
+        "tags": [
+            "multiplying_crafting_table"
+        ],
+        "pattern": [
+            "# N",
+            " i ",
+            "N R"
+        ],
+        "key": {
+                "#": {
+                    "item": "minecraft:golden_apple"
+                },
+                "N": {
+                    "item": "minecraft:blaze_rod"
+                },
+                "i": {
+                    "item": "minecraft:fishing_rod"
+                },
+                "R": {
+                    "item": "minecraft:coal"
+                }
+        },
+        "result": "adv:blazing_fishing_pole"
+    }
+}

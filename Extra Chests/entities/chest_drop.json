@@ -1,0 +1,61 @@
+{
+	"format_version": "1.19.30",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "extra_chests:chest_drop",
+			"is_spawnable": true,
+			"is_summonable": false,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "*",
+					"deals_damage": false
+				}
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:health": {
+				"value": 1,
+				"max": 1,
+				"min": 1
+			},
+			"minecraft:collision_box": {
+				"height": 0.1,
+				"width": 0.1
+			},
+			"minecraft:nameable": {
+				"allow_name_tag_renaming": false,
+				"always_show": false
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			}
+		},
+		"events": {
+			"minecraft:entity_transformed": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			},
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			}
+		}
+	}
+}

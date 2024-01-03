@@ -1,0 +1,45 @@
+{
+	"format_version": "1.19.30",
+	"minecraft:item": {
+		"description": {
+			"identifier": "extra_chests:paperclip",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "paperclip"
+			},
+			"minecraft:creative_category": {
+				"parent": "equipment"
+			},
+			"minecraft:render_offsets": {
+				"main_hand": {
+					"first_person": {
+						"scale": [
+							0.0375,
+							0.013,
+							0.0375
+						],
+						"position": [
+							1,
+							-1.8,
+							-3.2
+						],
+						"rotation": [
+							0,
+							0,
+							45
+						]
+					},
+					"third_person": {
+						"scale": [
+							0.0375,
+							0.0625,
+							0.0375
+						]
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "extra_chests:normal_diamond_chest_block",
+					"weight": 1
+				}
+			]
+		}
+	]
+}

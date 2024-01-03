@@ -1,0 +1,213 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "extra_chests:normal_iron_chest_block",
+			"is_experimental": false,
+			"properties": {
+				"chest:facing": [
+					0,
+					1,
+					2,
+					3
+				],
+				"chest:is_placed": [
+					0,
+					1
+				],
+				"chest:command_used": [
+					0,
+					1
+				]
+			}
+		},
+		"components": {
+			"minecraft:geometry": "geometry.normal_chest_block",
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "blend",
+					"texture": "iron_chest_texture"
+				}
+			},
+			"minecraft:destroy_time": 2,
+			"minecraft:creative_category": {
+				"category": "items",
+				"group": "itemGroup.name.chest"
+			},
+			"minecraft:map_color": "#ba6337",
+			"minecraft:explosion_resistance": 1,
+			"minecraft:on_placed": {
+				"event": "event:storage_checking"
+			},
+			"minecraft:on_player_placing": {
+				"event": "event:set_facing"
+			},
+			"minecraft:breathability": "air",
+			"minecraft:entity_collision": {
+				"size": [
+					14,
+					14,
+					14
+				],
+				"origin": [
+					-7,
+					0,
+					-7
+				]
+			},
+			"minecraft:pick_collision": {
+				"size": [
+					14,
+					10,
+					14
+				],
+				"origin": [
+					-7,
+					0,
+					-7
+				]
+			},
+			"minecraft:block_light_absorption": 1
+		},
+		"permutations": [
+			{
+				"condition": "q.block_property('chest:facing') == 0",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					]
+				}
+			},
+			{
+				"condition": "q.block_property('chest:facing') == 1",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "q.block_property('chest:facing') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						270,
+						0
+					]
+				}
+			},
+			{
+				"condition": "q.block_property('chest:facing') == 3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					]
+				}
+			},
+			{
+				"condition": "q.block_property('chest:is_placed') == 1",
+				"components": {
+					"minecraft:geometry": "geometry.transparent_block"
+				}
+			}
+		],
+		"events": {
+			"event:set_facing": {
+				"set_block_property": {
+					"chest:facing": "q.cardinal_facing_2d-2",
+					"chest:is_placed": 1
+				}
+			},
+			"event:storage_checking": {
+				"sequence": [
+					{
+						"condition": "q.block_property('chest:facing')==0&&q.block_property('chest:command_used')==0",
+						"trigger": {
+							"event": "event:add_storage_south",
+							"target": "self"
+						}
+					},
+					{
+						"condition": "q.block_property('chest:facing')==1&&q.block_property('chest:command_used')==0",
+						"trigger": {
+							"event": "event:add_storage_north",
+							"target": "self"
+						}
+					},
+					{
+						"condition": "q.block_property('chest:facing')==2&&q.block_property('chest:command_used')==0",
+						"trigger": {
+							"event": "event:add_storage_east",
+							"target": "self"
+						}
+					},
+					{
+						"condition": "q.block_property('chest:facing')==3&&q.block_property('chest:command_used')==0",
+						"trigger": {
+							"event": "event:add_storage_west",
+							"target": "self"
+						}
+					}
+				]
+			},
+			"event:add_storage_north": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"summon extra_chests:normal_iron_chest_shape ~ ~ ~ event:set_iron_chest_north",
+								"summon extra_chests:normal_iron_chest ~ ~ ~ event:add_iron_chest normal_iron_chest",
+								"tp @e[r=0.25] ~ ~-0.5 ~"
+							]
+						}
+					}
+				]
+			},
+			"event:add_storage_south": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"summon extra_chests:normal_iron_chest_shape ~ ~ ~ event:set_iron_chest_south",
+								"summon extra_chests:normal_iron_chest ~ ~ ~ event:add_iron_chest normal_iron_chest",
+								"tp @e[r=0.25] ~ ~-0.5 ~"
+							]
+						}
+					}
+				]
+			},
+			"event:add_storage_east": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"summon extra_chests:normal_iron_chest_shape ~ ~ ~ event:set_iron_chest_east",
+								"summon extra_chests:normal_iron_chest ~ ~ ~ event:add_iron_chest normal_iron_chest",
+								"tp @e[r=0.25] ~ ~-0.5 ~"
+							]
+						}
+					}
+				]
+			},
+			"event:add_storage_west": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"summon extra_chests:normal_iron_chest_shape ~ ~ ~ event:set_iron_chest_west",
+								"summon extra_chests:normal_iron_chest ~ ~ ~ event:add_iron_chest normal_iron_chest",
+								"tp @e[r=0.25] ~ ~-0.5 ~"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

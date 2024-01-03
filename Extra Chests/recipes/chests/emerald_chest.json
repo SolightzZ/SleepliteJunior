@@ -1,0 +1,27 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "extra_chests:emerald_chest"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			" O ",
+			"OXO",
+			" O "
+		],
+		"key": {
+			"O": {
+				"item": "minecraft:emerald"
+			},
+			"X": {
+				"item": "extra_chests:normal_gold_chest_block"
+			}
+		},
+		"result": {
+			"item": "extra_chests:normal_emerald_chest_block"
+		}
+	}
+}

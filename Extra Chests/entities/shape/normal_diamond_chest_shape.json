@@ -1,0 +1,1172 @@
+{
+	"format_version": "1.19.30",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "extra_chests:normal_diamond_chest_shape",
+			"is_summonable": true,
+			"is_spawnable": false,
+			"is_experimental": false,
+			"properties": {
+				"property:chest_facing": {
+					"type": "int",
+					"range": [
+						0,
+						3
+					],
+					"default": 0,
+					"client_sync": true
+				},
+				"property:is_opened": {
+					"default": false,
+					"type": "bool",
+					"client_sync": true
+				},
+				"property:lock_id": {
+					"type": "int",
+					"range": [
+						0,
+						6
+					],
+					"default": 0,
+					"client_sync": true
+				},
+				"property:is_success": {
+					"type": "bool",
+					"default": false,
+					"client_sync": true
+				},
+				"property:using_paperclips": {
+					"type": "bool",
+					"default": false,
+					"client_sync": true
+				},
+				"property:using_bamboo_crawler": {
+					"type": "bool",
+					"default": false,
+					"client_sync": true
+				},
+				"property:is_tamed": {
+					"default": false,
+					"type": "bool",
+					"client_sync": true
+				}
+			},
+			"animations": {
+				"replace_normal_block": "controller.animation.chest.replace_normal_diamond_block",
+				"replace_strong_block": "controller.animation.chest.replace_strong_diamond_block"
+			},
+			"scripts": {
+				"animate": [
+					"replace_normal_block",
+					"replace_strong_block"
+				]
+			}
+		},
+		"component_groups": {
+			"normal_chest:despawn": {
+				"minecraft:transformation": {
+					"into": "extra_chests:chest_drop",
+					"drop_inventory": true
+				},
+				"minecraft:instant_despawn": {}
+			},
+			"normal_chest:opened": {
+				"minecraft:type_family": {
+					"family": [
+						"opened"
+					]
+				}
+			},
+			"normal_chest:closed": {
+				"minecraft:type_family": {
+					"family": [
+						"closed"
+					]
+				}
+			},
+			"chest:locked": {
+				"minecraft:inside_block_notifier": {
+					"block_list": [
+						{
+							"block": {
+								"name": "extra_chests:locked_diamond_chest_block"
+							},
+							"exited_block_event": {
+								"event": "event:despawn"
+							}
+						}
+					]
+				}
+			},
+			"chest:unlocked": {
+				"minecraft:inside_block_notifier": {
+					"block_list": [
+						{
+							"block": {
+								"name": "extra_chests:normal_diamond_chest_block"
+							},
+							"exited_block_event": {
+								"event": "event:despawn"
+							}
+						}
+					]
+				}
+			}
+		},
+		"components": {
+			"minecraft:nameable": {
+				"always_show": false,
+				"allow_name_tag_renaming": false
+			},
+			"minecraft:type_family": {
+				"family": [
+					"extra_chests"
+				]
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "all",
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:health": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:collision_box": {
+				"width": 0,
+				"height": 0
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 1
+			}
+		},
+		"events": {
+			"event:set_diamond_chest_north": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"normal_chest:closed",
+								"chest:unlocked"
+							]
+						}
+					},
+					{
+						"set_property": {
+							"property:chest_facing": 0
+						}
+					}
+				]
+			},
+			"event:set_diamond_chest_south": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"normal_chest:closed",
+								"chest:unlocked"
+							]
+						}
+					},
+					{
+						"set_property": {
+							"property:chest_facing": 1
+						}
+					}
+				]
+			},
+			"event:set_diamond_chest_west": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"normal_chest:closed",
+								"chest:unlocked"
+							]
+						}
+					},
+					{
+						"set_property": {
+							"property:chest_facing": 2
+						}
+					}
+				]
+			},
+			"event:set_diamond_chest_east": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"normal_chest:closed",
+								"chest:unlocked"
+							]
+						}
+					},
+					{
+						"set_property": {
+							"property:chest_facing": 3
+						}
+					}
+				]
+			},
+			"event:normal_chest_close": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"playsound random.chestclosed @a[r=10] ~ ~ ~"
+							]
+						}
+					},
+					{
+						"remove": {
+							"component_groups": [
+								"normal_chest:opened"
+							]
+						}
+					},
+					{
+						"add": {
+							"component_groups": [
+								"normal_chest:closed"
+							]
+						}
+					},
+					{
+						"set_property": {
+							"property:is_opened": false
+						}
+					}
+				]
+			},
+			"event:normal_chest_open": {
+				"sequence": [
+					{
+						"run_command": {
+							"command": [
+								"playsound random.chestopen @a[r=10] ~ ~ ~"
+							]
+						}
+					},
+					{
+						"remove": {
+							"component_groups": [
+								"normal_chest:closed"
+							]
+						}
+					},
+					{
+						"add": {
+							"component_groups": [
+								"normal_chest:opened"
+							]
+						}
+					},
+					{
+						"set_property": {
+							"property:is_opened": true
+						}
+					}
+				]
+			},
+			"event:despawn": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"normal_chest:despawn"
+							]
+						}
+					}
+				]
+			},
+			"event:add_copper_lock": {
+				"set_property": {
+					"property:lock_id": 1
+				},
+				"add": {
+					"component_groups": [
+						"chest:locked"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"chest:unlocked"
+					]
+				}
+			},
+			"event:copper_lock_paperclips_success": {
+				"set_property": {
+					"property:is_success": true,
+					"property:using_paperclips": true
+				},
+				"add": {
+					"component_groups": [
+						"chest:unlocked"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"chest:locked"
+					]
+				}
+			},
+			"event:copper_lock_paperclips_failed": {
+				"set_property": {
+					"property:is_success": false,
+					"property:using_paperclips": true
+				}
+			},
+			"event:copper_lock_bamboo_crawler_success": {
+				"set_property": {
+					"property:is_success": true,
+					"property:using_bamboo_crawler": true
+				},
+				"add": {
+					"component_groups": [
+						"chest:unlocked"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"chest:locked"
+					]
+				}
+			},
+			"event:copper_lock_bamboo_crawler_failed": {
+				"set_property": {
+					"property:is_success": false,
+					"property:using_bamboo_crawler": true
+				}
+			},
+			"event:add_iron_lock": {
+				"set_property": {
+					"property:lock_id": 2
+				},
+				"add": {
+					"component_groups": [
+						"chest:locked"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"chest:unlocked"
+					]
+				}
+			},
+			"event:iron_lock_paperclips_success": {
+				"set_property": {
+					"property:is_success": true,
+					"property:using_paperclips": true
+				},
+				"add": {
+					"component_groups": [
+						"chest:unlocked"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"chest:locked"
+					]
+				}
+			},
+			"event:iron_lock_paperclips_failed": {
+				"set_property": {
+					"property:is_success": false,
+					"property:using_paperclips": true
+				}
+			},
+			"event:iron_lock_bamboo_crawler_success": {
+				"set_property": {
+					"property:is_success": true,
+					"property:using_bamboo_crawler": true
+				},
+				"add": {
+					"component_groups": [
+						"chest:unlocked"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"chest:locked"
+					]
+				}
+			},
+			"event:iron_lock_bamboo_crawler_failed": {
+				"set_property": {
+					"property:is_success": false,
+					"property:using_bamboo_crawler": true
+				}
+			},
+			"event:add_gold_lock": {
+				"set_property": {
+					"property:lock_id": 3
+				},
+				"add": {
+					"component_groups": [
+						"chest:locked"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"chest:unlocked"
+					]
+				}
+			},
+			"event:gold_lock_paperclips_success": {
+				"set_property": {
+					"property:is_success": true,
+					"property:using_paperclips": true
+				},
+				"add": {
+					"component_groups": [
+						"chest:unlocked"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"chest:locked"
+					]
+				}
+			},
+			"event:gold_lock_paperclips_failed": {
+				"set_property": {
+					"property:is_success": false,
+					"property:using_paperclips": true
+				}
+			},
+			"event:gold_lock_bamboo_crawler_success": {
+				"set_property": {
+					"property:is_success": true,
+					"property:using_bamboo_crawler": true
+				},
+				"add": {
+					"component_groups": [
+						"chest:unlocked"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"chest:locked"
+					]
+				}
+			},
+			"event:gold_lock_bamboo_crawler_failed": {
+				"set_property": {
+					"property:is_success": false,
+					"property:using_bamboo_crawler": true
+				}
+			},
+			"event:is_tamed": {
+				"set_property": {
+					"property:is_tamed": true
+				}
+			},
+			"event:reset_properties_9s": {
+				"sequence": [
+					{
+						"sequence": [
+							{
+								"filters": {
+									"all_of": [
+										{
+											"test": "bool_property",
+											"domain": "property:using_paperclips",
+											"value": true
+										},
+										{
+											"test": "bool_property",
+											"domain": "property:is_success",
+											"value": true
+										}
+									]
+								},
+								"sequence": [
+									{
+										"filters": {
+											"all_of": [
+												{
+													"test": "int_property",
+													"domain": "property:lock_id",
+													"value": 1
+												}
+											]
+										},
+										"sequence": [
+											{
+												"filters": {
+													"test": "int_property",
+													"domain": "property:chest_facing",
+													"value": 0
+												},
+												"run_command": {
+													"command": [
+														"loot spawn ~ ~ ~-1 loot paperclips_on_success_copper_lock",
+														"tp @e[type=item,r=2,c=4] ~ ~ ~-1",
+														"particle minecraft:death_explosion_emitter ~ ~ ~-1"
+													]
+												}
+											},
+											{
+												"filters": {
+													"test": "int_property",
+													"domain": "property:chest_facing",
+													"value": 1
+												},
+												"run_command": {
+													"command": [
+														"loot spawn ~ ~ ~1 loot paperclips_on_success_copper_lock",
+														"tp @e[type=item,r=2,c=4] ~ ~ ~1",
+														"particle minecraft:death_explosion_emitter ~ ~ ~1"
+													]
+												}
+											},
+											{
+												"filters": {
+													"test": "int_property",
+													"domain": "property:chest_facing",
+													"value": 2
+												},
+												"run_command": {
+													"command": [
+														"loot spawn ~-1 ~ ~ loot paperclips_on_success_copper_lock",
+														"tp @e[type=item,r=2,c=4] ~-1 ~ ~",
+														"particle minecraft:death_explosion_emitter ~-1 ~ ~"
+													]
+												}
+											},
+											{
+												"filters": {
+													"test": "int_property",
+													"domain": "property:chest_facing",
+													"value": 3
+												},
+												"run_command": {
+													"command": [
+														"loot spawn ~1 ~ ~ loot paperclips_on_success_copper_lock",
+														"tp @e[type=item,r=2,c=4] ~1 ~ ~",
+														"particle minecraft:death_explosion_emitter ~1 ~ ~"
+													]
+												}
+											}
+										]
+									},
+									{
+										"filters": {
+											"all_of": [
+												{
+													"test": "int_property",
+													"domain": "property:lock_id",
+													"value": 2
+												}
+											]
+										},
+										"sequence": [
+											{
+												"filters": {
+													"test": "int_property",
+													"domain": "property:chest_facing",
+													"value": 0
+												},
+												"run_command": {
+													"command": [
+														"loot spawn ~ ~ ~-1 loot paperclips_on_success_iron_lock",
+														"tp @e[type=item,r=2,c=4] ~ ~ ~-1",
+														"particle minecraft:death_explosion_emitter ~ ~ ~-1"
+													]
+												}
+											},
+											{
+												"filters": {
+													"test": "int_property",
+													"domain": "property:chest_facing",
+													"value": 1
+												},
+												"run_command": {
+													"command": [
+														"loot spawn ~ ~ ~1 loot paperclips_on_success_iron_lock",
+														"tp @e[type=item,r=2,c=4] ~ ~ ~1",
+														"particle minecraft:death_explosion_emitter ~ ~ ~1"
+													]
+												}
+											},
+											{
+												"filters": {
+													"test": "int_property",
+													"domain": "property:chest_facing",
+													"value": 2
+												},
+												"run_command": {
+													"command": [
+														"loot spawn ~-1 ~ ~ loot paperclips_on_success_iron_lock",
+														"tp @e[type=item,r=2,c=4] ~-1 ~ ~",
+														"particle minecraft:death_explosion_emitter ~-1 ~ ~"
+													]
+												}
+											},
+											{
+												"filters": {
+													"test": "int_property",
+													"domain": "property:chest_facing",
+													"value": 3
+												},
+												"run_command": {
+													"command": [
+														"loot spawn ~1 ~ ~ loot paperclips_on_success_iron_lock",
+														"tp @e[type=item,r=2,c=4] ~1 ~ ~",
+														"particle minecraft:death_explosion_emitter ~1 ~ ~"
+													]
+												}
+											}
+										]
+									},
+									{
+										"filters": {
+											"all_of": [
+												{
+													"test": "int_property",
+													"domain": "property:lock_id",
+													"value": 3
+												}
+											]
+										},
+										"sequence": [
+											{
+												"filters": {
+													"test": "int_property",
+													"domain": "property:chest_facing",
+													"value": 0
+												},
+												"run_command": {
+													"command": [
+														"loot spawn ~ ~ ~-1 loot paperclips_on_success_gold_lock",
+														"tp @e[type=item,r=2,c=4] ~ ~ ~-1",
+														"particle minecraft:death_explosion_emitter ~ ~ ~-1"
+													]
+												}
+											},
+											{
+												"filters": {
+													"test": "int_property",
+													"domain": "property:chest_facing",
+													"value": 1
+												},
+												"run_command": {
+													"command": [
+														"loot spawn ~ ~ ~1 loot paperclips_on_success_gold_lock",
+														"tp @e[type=item,r=2,c=4] ~ ~ ~1",
+														"particle minecraft:death_explosion_emitter ~ ~ ~1"
+													]
+												}
+											},
+											{
+												"filters": {
+													"test": "int_property",
+													"domain": "property:chest_facing",
+													"value": 2
+												},
+												"run_command": {
+													"command": [
+														"loot spawn ~-1 ~ ~ loot paperclips_on_success_gold_lock",
+														"tp @e[type=item,r=2,c=4] ~-1 ~ ~",
+														"particle minecraft:death_explosion_emitter ~-1 ~ ~"
+													]
+												}
+											},
+											{
+												"filters": {
+													"test": "int_property",
+													"domain": "property:chest_facing",
+													"value": 3
+												},
+												"run_command": {
+													"command": [
+														"loot spawn ~1 ~ ~ loot paperclips_on_success_gold_lock",
+														"tp @e[type=item,r=2,c=4] ~1 ~ ~",
+														"particle minecraft:death_explosion_emitter ~1 ~ ~"
+													]
+												}
+											}
+										]
+									}
+								]
+							},
+							{
+								"filters": {
+									"all_of": [
+										{
+											"test": "bool_property",
+											"domain": "property:using_bamboo_crawler",
+											"value": true
+										},
+										{
+											"test": "bool_property",
+											"domain": "property:is_success",
+											"value": true
+										}
+									]
+								},
+								"sequence": [
+									{
+										"filters": {
+											"all_of": [
+												{
+													"test": "int_property",
+													"domain": "property:lock_id",
+													"value": 1
+												}
+											]
+										},
+										"sequence": [
+											{
+												"filters": {
+													"test": "int_property",
+													"domain": "property:chest_facing",
+													"value": 0
+												},
+												"run_command": {
+													"command": [
+														"loot spawn ~ ~ ~-1 loot bamboo_crawler_on_success_copper_lock",
+														"tp @e[type=item,r=2,c=4] ~ ~ ~-1",
+														"particle minecraft:death_explosion_emitter ~ ~ ~-1"
+													]
+												}
+											},
+											{
+												"filters": {
+													"test": "int_property",
+													"domain": "property:chest_facing",
+													"value": 1
+												},
+												"run_command": {
+													"command": [
+														"loot spawn ~ ~ ~1 loot bamboo_crawler_on_success_copper_lock",
+														"tp @e[type=item,r=2,c=4] ~ ~ ~1",
+														"particle minecraft:death_explosion_emitter ~ ~ ~1"
+													]
+												}
+											},
+											{
+												"filters": {
+													"test": "int_property",
+													"domain": "property:chest_facing",
+													"value": 2
+												},
+												"run_command": {
+													"command": [
+														"loot spawn ~-1 ~ ~ loot bamboo_crawler_on_success_copper_lock",
+														"tp @e[type=item,r=2,c=4] ~-1 ~ ~",
+														"particle minecraft:death_explosion_emitter ~-1 ~ ~"
+													]
+												}
+											},
+											{
+												"filters": {
+													"test": "int_property",
+													"domain": "property:chest_facing",
+													"value": 3
+												},
+												"run_command": {
+													"command": [
+														"loot spawn ~1 ~ ~ loot bamboo_crawler_on_success_copper_lock",
+														"tp @e[type=item,r=2,c=4] ~1 ~ ~",
+														"particle minecraft:death_explosion_emitter ~1 ~ ~"
+													]
+												}
+											}
+										]
+									},
+									{
+										"filters": {
+											"all_of": [
+												{
+													"test": "int_property",
+													"domain": "property:lock_id",
+													"value": 2
+												}
+											]
+										},
+										"sequence": [
+											{
+												"filters": {
+													"test": "int_property",
+													"domain": "property:chest_facing",
+													"value": 0
+												},
+												"run_command": {
+													"command": [
+														"loot spawn ~ ~ ~-1 loot bamboo_crawler_on_success_iron_lock",
+														"tp @e[type=item,r=2,c=4] ~ ~ ~-1",
+														"particle minecraft:death_explosion_emitter ~ ~ ~-1"
+													]
+												}
+											},
+											{
+												"filters": {
+													"test": "int_property",
+													"domain": "property:chest_facing",
+													"value": 1
+												},
+												"run_command": {
+													"command": [
+														"loot spawn ~ ~ ~1 loot bamboo_crawler_on_success_iron_lock",
+														"tp @e[type=item,r=2,c=4] ~ ~ ~1",
+														"particle minecraft:death_explosion_emitter ~ ~ ~1"
+													]
+												}
+											},
+											{
+												"filters": {
+													"test": "int_property",
+													"domain": "property:chest_facing",
+													"value": 2
+												},
+												"run_command": {
+													"command": [
+														"loot spawn ~-1 ~ ~ loot bamboo_crawler_on_success_iron_lock",
+														"tp @e[type=item,r=2,c=4] ~-1 ~ ~",
+														"particle minecraft:death_explosion_emitter ~-1 ~ ~"
+													]
+												}
+											},
+											{
+												"filters": {
+													"test": "int_property",
+													"domain": "property:chest_facing",
+													"value": 3
+												},
+												"run_command": {
+													"command": [
+														"loot spawn ~1 ~ ~ loot bamboo_crawler_on_success_iron_lock",
+														"tp @e[type=item,r=2,c=4] ~1 ~ ~",
+														"particle minecraft:death_explosion_emitter ~1 ~ ~"
+													]
+												}
+											}
+										]
+									},
+									{
+										"filters": {
+											"all_of": [
+												{
+													"test": "int_property",
+													"domain": "property:lock_id",
+													"value": 3
+												}
+											]
+										},
+										"sequence": [
+											{
+												"filters": {
+													"test": "int_property",
+													"domain": "property:chest_facing",
+													"value": 0
+												},
+												"run_command": {
+													"command": [
+														"loot spawn ~ ~ ~-1 loot bamboo_crawler_on_success_gold_lock",
+														"tp @e[type=item,r=2,c=4] ~ ~ ~-1",
+														"particle minecraft:death_explosion_emitter ~ ~ ~-1"
+													]
+												}
+											},
+											{
+												"filters": {
+													"test": "int_property",
+													"domain": "property:chest_facing",
+													"value": 1
+												},
+												"run_command": {
+													"command": [
+														"loot spawn ~ ~ ~1 loot bamboo_crawler_on_success_gold_lock",
+														"tp @e[type=item,r=2,c=4] ~ ~ ~1",
+														"particle minecraft:death_explosion_emitter ~ ~ ~1"
+													]
+												}
+											},
+											{
+												"filters": {
+													"test": "int_property",
+													"domain": "property:chest_facing",
+													"value": 2
+												},
+												"run_command": {
+													"command": [
+														"loot spawn ~-1 ~ ~ loot bamboo_crawler_on_success_gold_lock",
+														"tp @e[type=item,r=2,c=4] ~-1 ~ ~",
+														"particle minecraft:death_explosion_emitter ~-1 ~ ~"
+													]
+												}
+											},
+											{
+												"filters": {
+													"test": "int_property",
+													"domain": "property:chest_facing",
+													"value": 3
+												},
+												"run_command": {
+													"command": [
+														"loot spawn ~1 ~ ~ loot bamboo_crawler_on_success_gold_lock",
+														"tp @e[type=item,r=2,c=4] ~1 ~ ~",
+														"particle minecraft:death_explosion_emitter ~1 ~ ~"
+													]
+												}
+											}
+										]
+									}
+								]
+							},
+							{
+								"filters": {
+									"all_of": [
+										{
+											"test": "bool_property",
+											"domain": "property:using_bamboo_crawler",
+											"value": true
+										},
+										{
+											"test": "bool_property",
+											"domain": "property:is_success",
+											"value": false
+										}
+									]
+								},
+								"sequence": [
+									{
+										"filters": {
+											"all_of": [
+												{
+													"test": "int_property",
+													"domain": "property:lock_id",
+													"value": 1
+												}
+											]
+										},
+										"sequence": [
+											{
+												"filters": {
+													"test": "int_property",
+													"domain": "property:chest_facing",
+													"value": 0
+												},
+												"run_command": {
+													"command": [
+														"loot spawn ~ ~ ~-1 loot bamboo_crawler_on_failed_copper_lock",
+														"tp @e[type=item,r=2,c=4] ~ ~ ~-1",
+														"particle minecraft:death_explosion_emitter ~ ~ ~-1"
+													]
+												}
+											},
+											{
+												"filters": {
+													"test": "int_property",
+													"domain": "property:chest_facing",
+													"value": 1
+												},
+												"run_command": {
+													"command": [
+														"loot spawn ~ ~ ~1 loot bamboo_crawler_on_failed_copper_lock",
+														"tp @e[type=item,r=2,c=4] ~ ~ ~1",
+														"particle minecraft:death_explosion_emitter ~ ~ ~1"
+													]
+												}
+											},
+											{
+												"filters": {
+													"test": "int_property",
+													"domain": "property:chest_facing",
+													"value": 2
+												},
+												"run_command": {
+													"command": [
+														"loot spawn ~-1 ~ ~ loot bamboo_crawler_on_failed_copper_lock",
+														"tp @e[type=item,r=2,c=4] ~-1 ~ ~",
+														"particle minecraft:death_explosion_emitter ~-1 ~ ~"
+													]
+												}
+											},
+											{
+												"filters": {
+													"test": "int_property",
+													"domain": "property:chest_facing",
+													"value": 3
+												},
+												"run_command": {
+													"command": [
+														"loot spawn ~1 ~ ~ loot bamboo_crawler_on_failed_copper_lock",
+														"tp @e[type=item,r=2,c=4] ~1 ~ ~",
+														"particle minecraft:death_explosion_emitter ~1 ~ ~"
+													]
+												}
+											}
+										]
+									},
+									{
+										"filters": {
+											"all_of": [
+												{
+													"test": "int_property",
+													"domain": "property:lock_id",
+													"value": 2
+												}
+											]
+										},
+										"sequence": [
+											{
+												"filters": {
+													"test": "int_property",
+													"domain": "property:chest_facing",
+													"value": 0
+												},
+												"run_command": {
+													"command": [
+														"loot spawn ~ ~ ~-1 loot bamboo_crawler_on_failed_iron_lock",
+														"tp @e[type=item,r=2,c=4] ~ ~ ~-1",
+														"particle minecraft:death_explosion_emitter ~ ~ ~-1"
+													]
+												}
+											},
+											{
+												"filters": {
+													"test": "int_property",
+													"domain": "property:chest_facing",
+													"value": 1
+												},
+												"run_command": {
+													"command": [
+														"loot spawn ~ ~ ~1 loot bamboo_crawler_on_failed_iron_lock",
+														"tp @e[type=item,r=2,c=4] ~ ~ ~1",
+														"particle minecraft:death_explosion_emitter ~ ~ ~1"
+													]
+												}
+											},
+											{
+												"filters": {
+													"test": "int_property",
+													"domain": "property:chest_facing",
+													"value": 2
+												},
+												"run_command": {
+													"command": [
+														"loot spawn ~-1 ~ ~ loot bamboo_crawler_on_failed_iron_lock",
+														"tp @e[type=item,r=2,c=4] ~-1 ~ ~",
+														"particle minecraft:death_explosion_emitter ~-1 ~ ~"
+													]
+												}
+											},
+											{
+												"filters": {
+													"test": "int_property",
+													"domain": "property:chest_facing",
+													"value": 3
+												},
+												"run_command": {
+													"command": [
+														"loot spawn ~1 ~ ~ loot bamboo_crawler_on_failed_iron_lock",
+														"tp @e[type=item,r=2,c=4] ~1 ~ ~",
+														"particle minecraft:death_explosion_emitter ~1 ~ ~"
+													]
+												}
+											}
+										]
+									},
+									{
+										"filters": {
+											"all_of": [
+												{
+													"test": "int_property",
+													"domain": "property:lock_id",
+													"value": 3
+												}
+											]
+										},
+										"sequence": [
+											{
+												"filters": {
+													"test": "int_property",
+													"domain": "property:chest_facing",
+													"value": 0
+												},
+												"run_command": {
+													"command": [
+														"loot spawn ~ ~ ~-1 loot bamboo_crawler_on_failed_gold_lock",
+														"tp @e[type=item,r=2,c=4] ~ ~ ~-1",
+														"particle minecraft:death_explosion_emitter ~ ~ ~-1"
+													]
+												}
+											},
+											{
+												"filters": {
+													"test": "int_property",
+													"domain": "property:chest_facing",
+													"value": 1
+												},
+												"run_command": {
+													"command": [
+														"loot spawn ~ ~ ~1 loot bamboo_crawler_on_failed_gold_lock",
+														"tp @e[type=item,r=2,c=4] ~ ~ ~1",
+														"particle minecraft:death_explosion_emitter ~ ~ ~1"
+													]
+												}
+											},
+											{
+												"filters": {
+													"test": "int_property",
+													"domain": "property:chest_facing",
+													"value": 2
+												},
+												"run_command": {
+													"command": [
+														"loot spawn ~-1 ~ ~ loot bamboo_crawler_on_failed_gold_lock",
+														"tp @e[type=item,r=2,c=4] ~-1 ~ ~",
+														"particle minecraft:death_explosion_emitter ~-1 ~ ~"
+													]
+												}
+											},
+											{
+												"filters": {
+													"test": "int_property",
+													"domain": "property:chest_facing",
+													"value": 3
+												},
+												"run_command": {
+													"command": [
+														"loot spawn ~1 ~ ~ loot bamboo_crawler_on_failed_gold_lock",
+														"tp @e[type=item,r=2,c=4] ~1 ~ ~",
+														"particle minecraft:death_explosion_emitter ~1 ~ ~"
+													]
+												}
+											}
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"filters": {
+							"test": "bool_property",
+							"domain": "property:is_success",
+							"value": true
+						},
+						"set_property": {
+							"property:lock_id": 0
+						}
+					},
+					{
+						"set_property": {
+							"property:is_success": false,
+							"property:using_paperclips": false,
+							"property:using_bamboo_crawler": false
+						}
+					}
+				]
+			}
+		}
+	}
+}

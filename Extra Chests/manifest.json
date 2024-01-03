@@ -1,0 +1,72 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"authors": [
+			"The Brothers"
+		],
+		"generated_with": {
+			"bridge": [
+				"2.6.1"
+			],
+			"dash": [
+				"0.10.10"
+			]
+		}
+	},
+	"header": {
+		"name": "Extra Chests",
+		"description": "Extra Chests Pack [BP]. It's a new Minecraft chests addon for pocket, Desktop and console Edition. It support only 1.19.30 and above. Every chest have it's unique UI Texture and custom open & close animation with sounds. It contain Copper, Iron, Gold, Emerald, Diamond, Netherite chests.All chests are lockable and can be breaked wth custom items using a random chance.",
+		"min_engine_version": [
+			1,
+			19,
+			30
+		],
+		"uuid": "7d99e171-29eb-4a9d-860d-b4f702d105a3",
+		"version": [
+			1,
+			0,
+			0
+		]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "1e77ead2-e7af-4cc7-b10f-25c696b91ded",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "2eb8dfdb-94af-4d31-9a8c-28528293cffe",
+			"version": [
+				1,
+				0,
+				0
+			]
+		},
+		{
+			"module_name": "mojang-minecraft",
+			"version": "1.0.0-beta"
+		},
+		{
+			"module_name": "mojang-gametest",
+			"version": "1.0.0-beta"
+		},
+		{
+			"module_name": "mojang-minecraft-ui",
+			"version": "1.0.0-beta"
+		},
+		{
+			"module_name": "mojang-minecraft-server-admin",
+			"version": "1.0.0-beta"
+		},
+		{
+			"module_name": "mojang-net",
+			"version": "1.0.0-beta"
+		}
+	]
+}

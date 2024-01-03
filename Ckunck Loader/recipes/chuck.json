@@ -1,0 +1,25 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "fxnt:chuck"
+    },
+    "tags": ["multiplying_crafting_table"],
+    "pattern": ["iii", "ici", "ggg"],
+    "key": {
+      "i": {
+        "item": "minecraft:diamond"
+      },
+      "c": {
+        "item": "minecraft:nether_star"
+      },
+      "g": {
+        "item": "minecraft:iron_ingot"
+      }
+    },
+    "result": {
+      "item": "fxnt:chuck",
+      "count": 1
+    }
+  }
+}

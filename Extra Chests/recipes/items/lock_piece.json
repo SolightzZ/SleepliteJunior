@@ -1,0 +1,30 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "extra_chests:lock_piece"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			" X ",
+			"X X",
+			"OYO"
+		],
+		"key": {
+			"O": {
+				"item": "minecraft:redstone"
+			},
+			"X": {
+				"item": "minecraft:iron_nugget"
+			},
+			"Y": {
+				"item": "minecraft:phantom_membrane"
+			}
+		},
+		"result": {
+			"item": "extra_chests:lock_piece"
+		}
+	}
+}

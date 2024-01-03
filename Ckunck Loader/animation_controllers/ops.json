@@ -1,0 +1,21 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.fxnt.ops": {
+      "initial_state": "inactive",
+      "states": {
+        "inactive": {
+          "transitions": [
+            { "active": "query.skin_id == 2 || query.skin_id == 3" }
+          ]
+        },
+        "active": {
+          "animations": ["fxnt_ops_run"],
+          "transitions": [
+            { "inactive": "query.skin_id != 2 && query.skin_id != 3" }
+          ]
+        }
+      }
+    }
+  }
+}

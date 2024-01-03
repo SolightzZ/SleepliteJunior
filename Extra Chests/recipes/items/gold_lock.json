@@ -1,0 +1,33 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "extra_chests:gold_lock"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"XZX",
+			"OYO",
+			"OOO"
+		],
+		"key": {
+			"O": {
+				"item": "minecraft:gold_ingot"
+			},
+			"X": {
+				"item": "minecraft:iron_ingot"
+			},
+			"Y": {
+				"item": "extra_chests:lock_piece"
+			},
+			"Z": {
+				"item": "extra_chests:iron_lock"
+			}
+		},
+		"result": {
+			"item": "extra_chests:gold_lock"
+		}
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"format_version": "1.19.30",
+	"minecraft:item": {
+		"description": {
+			"identifier": "extra_chests:rope",
+			"category": "items"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "rope"
+			},
+			"minecraft:creative_category": {
+				"parent": "items"
+			}
+		}
+	}
+}

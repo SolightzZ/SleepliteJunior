@@ -1,0 +1,27 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "extra_chests:copper_lock"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"XXX",
+			"O O",
+			"OOO"
+		],
+		"key": {
+			"O": {
+				"item": "minecraft:copper_ingot"
+			},
+			"X": {
+				"item": "minecraft:iron_ingot"
+			}
+		},
+		"result": {
+			"item": "extra_chests:copper_lock"
+		}
+	}
+}

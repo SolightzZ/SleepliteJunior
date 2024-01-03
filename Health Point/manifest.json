@@ -1,0 +1,31 @@
+{
+  "format_version": 2,
+  "header": {
+    "description": "pack.description",
+    "name": "Health Point",
+    "uuid": "678ac6dc-1167-49cf-b8b2-78a941e986ec",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 20, 0]
+  },
+  "modules": [
+    {
+      "description": "JavaScript module code",
+      "language": "javascript",
+      "type": "script",
+      "uuid": "cbb41902-87d3-4fd4-b365-92fe268dd0c2",
+      "version": [1, 0, 0],
+      "entry": "scripts/main.js"
+    }
+  ],
+  "dependencies": [
+    {
+      "module_name": "@minecraft/server",
+      "version": "1.4.0-beta"
+    }
+  ],
+  "metadata": {
+    "authors": ["Lete114"],
+    "license": "GPL-2.0",
+    "url": "https://github.com/mcbe-mods/Hit-Point"
+  }
+}

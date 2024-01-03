@@ -1,0 +1,106 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "extra_chests:locked_iron_chest_block",
+			"is_experimental": false,
+			"properties": {
+				"chest:facing": [
+					0,
+					1,
+					2,
+					3
+				],
+				"chest:is_placed": [
+					0,
+					1
+				]
+			}
+		},
+		"components": {
+			"minecraft:geometry": "geometry.transparent_block",
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "blend",
+					"texture": "iron_chest_texture"
+				}
+			},
+			"minecraft:destroy_time": 3600,
+			"minecraft:creative_category": {
+				"category": "commands",
+				"group": "commands"
+			},
+			"minecraft:map_color": "#ba6337",
+			"minecraft:explosion_resistance": 1000,
+			"minecraft:breathability": "air",
+			"minecraft:entity_collision": {
+				"size": [
+					14,
+					14,
+					14
+				],
+				"origin": [
+					-7,
+					0,
+					-7
+				]
+			},
+			"minecraft:pick_collision": {
+				"size": [
+					14,
+					10,
+					14
+				],
+				"origin": [
+					-7,
+					0,
+					-7
+				]
+			},
+			"minecraft:block_light_absorption": 1,
+			"minecraft:loot": "loot_tables/chest_blocks/iron_chest_drop.json"
+		},
+		"permutations": [
+			{
+				"condition": "q.block_property('chest:facing') == 0",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						180,
+						0
+					]
+				}
+			},
+			{
+				"condition": "q.block_property('chest:facing') == 1",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			},
+			{
+				"condition": "q.block_property('chest:facing') == 2",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						270,
+						0
+					]
+				}
+			},
+			{
+				"condition": "q.block_property('chest:facing') == 3",
+				"components": {
+					"minecraft:rotation": [
+						0,
+						90,
+						0
+					]
+				}
+			}
+		]
+	}
+}

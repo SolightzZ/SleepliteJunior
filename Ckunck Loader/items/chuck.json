@@ -1,0 +1,19 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": { 
+      "identifier": "fxnt:chuck" 
+    },
+    "components": {
+      "minecraft:icon": 
+      { "texture": "chuck_item" 
+    },
+      "minecraft:entity_placer": 
+      { "entity": "fxnt:chuck" 
+     },
+     "minecraft:creative_category": {
+				"parent": "items"
+			}
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "extra_chests:paperclip"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			" X ",
+			"X",
+			" X "
+		],
+		"key": {
+			"X": {
+				"item": "minecraft:copper_ingot"
+			}
+		},
+		"result": {
+			"item": "extra_chests:paperclip",
+			"count": 3
+		}
+	}
+}

@@ -1,0 +1,863 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.chest.replace_normal_copper_block": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"checking": "query.property('property:lock_id')"
+						}
+					]
+				},
+				"checking": {
+					"transitions": [
+						{
+							"north": "query.property('property:chest_facing')==0"
+						},
+						{
+							"south": "query.property('property:chest_facing')==1"
+						},
+						{
+							"west": "query.property('property:chest_facing')==2"
+						},
+						{
+							"east": "query.property('property:chest_facing')==3"
+						}
+					]
+				},
+				"north": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:locked_copper_chest_block [\"chest:facing\":1] replace"
+					],
+					"transitions": [
+						{
+							"default": "!query.property('property:lock_id')"
+						}
+					]
+				},
+				"south": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:locked_copper_chest_block [\"chest:facing\":0] replace"
+					],
+					"transitions": [
+						{
+							"default": "!query.property('property:lock_id')"
+						}
+					]
+				},
+				"west": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:locked_copper_chest_block [\"chest:facing\":3] replace"
+					],
+					"transitions": [
+						{
+							"default": "!query.property('property:lock_id')"
+						}
+					]
+				},
+				"east": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:locked_copper_chest_block [\"chest:facing\":2] replace"
+					],
+					"transitions": [
+						{
+							"default": "!query.property('property:lock_id')"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.chest.replace_strong_copper_block": {
+			"initial_state": "default2",
+			"states": {
+				"default2": {
+					"transitions": [
+						{
+							"default": "query.property('property:lock_id')!=0"
+						}
+					]
+				},
+				"default": {
+					"transitions": [
+						{
+							"checking": "query.property('property:lock_id')==0"
+						}
+					]
+				},
+				"checking": {
+					"transitions": [
+						{
+							"north": "query.property('property:chest_facing')==0"
+						},
+						{
+							"south": "query.property('property:chest_facing')==1"
+						},
+						{
+							"west": "query.property('property:chest_facing')==2"
+						},
+						{
+							"east": "query.property('property:chest_facing')==3"
+						}
+					]
+				},
+				"north": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:normal_copper_chest_block [\"chest:facing\":1,\"chest:command_used\":1,\"chest:is_placed\":1] replace"
+					],
+					"transitions": [
+						{
+							"default": "q.property('property:lock_id')!=0"
+						}
+					]
+				},
+				"south": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:normal_copper_chest_block [\"chest:facing\":0,\"chest:command_used\":1,\"chest:is_placed\":1] replace"
+					],
+					"transitions": [
+						{
+							"default": "q.property('property:lock_id')!=0"
+						}
+					]
+				},
+				"west": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:normal_copper_chest_block [\"chest:facing\":3,\"chest:command_used\":1,\"chest:is_placed\":1] replace"
+					],
+					"transitions": [
+						{
+							"default": "q.property('property:lock_id')!=0"
+						}
+					]
+				},
+				"east": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:normal_copper_chest_block [\"chest:facing\":2,\"chest:command_used\":1,\"chest:is_placed\":1] replace"
+					],
+					"transitions": [
+						{
+							"default": "q.property('property:lock_id')!=0"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.chest.replace_normal_iron_block": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"checking": "query.property('property:lock_id')"
+						}
+					]
+				},
+				"checking": {
+					"transitions": [
+						{
+							"north": "query.property('property:chest_facing')==0"
+						},
+						{
+							"south": "query.property('property:chest_facing')==1"
+						},
+						{
+							"west": "query.property('property:chest_facing')==2"
+						},
+						{
+							"east": "query.property('property:chest_facing')==3"
+						}
+					]
+				},
+				"north": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:locked_iron_chest_block [\"chest:facing\":1] replace"
+					],
+					"transitions": [
+						{
+							"default": "!query.property('property:lock_id')"
+						}
+					]
+				},
+				"south": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:locked_iron_chest_block [\"chest:facing\":0] replace"
+					],
+					"transitions": [
+						{
+							"default": "!query.property('property:lock_id')"
+						}
+					]
+				},
+				"west": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:locked_iron_chest_block [\"chest:facing\":3] replace"
+					],
+					"transitions": [
+						{
+							"default": "!query.property('property:lock_id')"
+						}
+					]
+				},
+				"east": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:locked_iron_chest_block [\"chest:facing\":2] replace"
+					],
+					"transitions": [
+						{
+							"default": "!query.property('property:lock_id')"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.chest.replace_strong_iron_block": {
+			"initial_state": "default2",
+			"states": {
+				"default2": {
+					"transitions": [
+						{
+							"default": "query.property('property:lock_id')!=0"
+						}
+					]
+				},
+				"default": {
+					"transitions": [
+						{
+							"checking": "query.property('property:lock_id')==0"
+						}
+					]
+				},
+				"checking": {
+					"transitions": [
+						{
+							"north": "query.property('property:chest_facing')==0"
+						},
+						{
+							"south": "query.property('property:chest_facing')==1"
+						},
+						{
+							"west": "query.property('property:chest_facing')==2"
+						},
+						{
+							"east": "query.property('property:chest_facing')==3"
+						}
+					]
+				},
+				"north": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:normal_iron_chest_block [\"chest:facing\":1,\"chest:command_used\":1,\"chest:is_placed\":1] replace"
+					],
+					"transitions": [
+						{
+							"default": "q.property('property:lock_id')!=0"
+						}
+					]
+				},
+				"south": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:normal_iron_chest_block [\"chest:facing\":0,\"chest:command_used\":1,\"chest:is_placed\":1] replace"
+					],
+					"transitions": [
+						{
+							"default": "q.property('property:lock_id')!=0"
+						}
+					]
+				},
+				"west": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:normal_iron_chest_block [\"chest:facing\":3,\"chest:command_used\":1,\"chest:is_placed\":1] replace"
+					],
+					"transitions": [
+						{
+							"default": "q.property('property:lock_id')!=0"
+						}
+					]
+				},
+				"east": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:normal_iron_chest_block [\"chest:facing\":2,\"chest:command_used\":1,\"chest:is_placed\":1] replace"
+					],
+					"transitions": [
+						{
+							"default": "q.property('property:lock_id')!=0"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.chest.replace_normal_gold_block": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"checking": "query.property('property:lock_id')"
+						}
+					]
+				},
+				"checking": {
+					"transitions": [
+						{
+							"north": "query.property('property:chest_facing')==0"
+						},
+						{
+							"south": "query.property('property:chest_facing')==1"
+						},
+						{
+							"west": "query.property('property:chest_facing')==2"
+						},
+						{
+							"east": "query.property('property:chest_facing')==3"
+						}
+					]
+				},
+				"north": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:locked_gold_chest_block [\"chest:facing\":1] replace"
+					],
+					"transitions": [
+						{
+							"default": "!query.property('property:lock_id')"
+						}
+					]
+				},
+				"south": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:locked_gold_chest_block [\"chest:facing\":0] replace"
+					],
+					"transitions": [
+						{
+							"default": "!query.property('property:lock_id')"
+						}
+					]
+				},
+				"west": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:locked_gold_chest_block [\"chest:facing\":3] replace"
+					],
+					"transitions": [
+						{
+							"default": "!query.property('property:lock_id')"
+						}
+					]
+				},
+				"east": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:locked_gold_chest_block [\"chest:facing\":2] replace"
+					],
+					"transitions": [
+						{
+							"default": "!query.property('property:lock_id')"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.chest.replace_strong_gold_block": {
+			"initial_state": "default2",
+			"states": {
+				"default2": {
+					"transitions": [
+						{
+							"default": "query.property('property:lock_id')!=0"
+						}
+					]
+				},
+				"default": {
+					"transitions": [
+						{
+							"checking": "query.property('property:lock_id')==0"
+						}
+					]
+				},
+				"checking": {
+					"transitions": [
+						{
+							"north": "query.property('property:chest_facing')==0"
+						},
+						{
+							"south": "query.property('property:chest_facing')==1"
+						},
+						{
+							"west": "query.property('property:chest_facing')==2"
+						},
+						{
+							"east": "query.property('property:chest_facing')==3"
+						}
+					]
+				},
+				"north": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:normal_gold_chest_block [\"chest:facing\":1,\"chest:command_used\":1,\"chest:is_placed\":1] replace"
+					],
+					"transitions": [
+						{
+							"default": "q.property('property:lock_id')!=0"
+						}
+					]
+				},
+				"south": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:normal_gold_chest_block [\"chest:facing\":0,\"chest:command_used\":1,\"chest:is_placed\":1] replace"
+					],
+					"transitions": [
+						{
+							"default": "q.property('property:lock_id')!=0"
+						}
+					]
+				},
+				"west": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:normal_gold_chest_block [\"chest:facing\":3,\"chest:command_used\":1,\"chest:is_placed\":1] replace"
+					],
+					"transitions": [
+						{
+							"default": "q.property('property:lock_id')!=0"
+						}
+					]
+				},
+				"east": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:normal_gold_chest_block [\"chest:facing\":2,\"chest:command_used\":1,\"chest:is_placed\":1] replace"
+					],
+					"transitions": [
+						{
+							"default": "q.property('property:lock_id')!=0"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.chest.replace_normal_emerald_block": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"checking": "query.property('property:lock_id')"
+						}
+					]
+				},
+				"checking": {
+					"transitions": [
+						{
+							"north": "query.property('property:chest_facing')==0"
+						},
+						{
+							"south": "query.property('property:chest_facing')==1"
+						},
+						{
+							"west": "query.property('property:chest_facing')==2"
+						},
+						{
+							"east": "query.property('property:chest_facing')==3"
+						}
+					]
+				},
+				"north": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:locked_emerald_chest_block [\"chest:facing\":1] replace"
+					],
+					"transitions": [
+						{
+							"default": "!query.property('property:lock_id')"
+						}
+					]
+				},
+				"south": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:locked_emerald_chest_block [\"chest:facing\":0] replace"
+					],
+					"transitions": [
+						{
+							"default": "!query.property('property:lock_id')"
+						}
+					]
+				},
+				"west": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:locked_emerald_chest_block [\"chest:facing\":3] replace"
+					],
+					"transitions": [
+						{
+							"default": "!query.property('property:lock_id')"
+						}
+					]
+				},
+				"east": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:locked_emerald_chest_block [\"chest:facing\":2] replace"
+					],
+					"transitions": [
+						{
+							"default": "!query.property('property:lock_id')"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.chest.replace_strong_emerald_block": {
+			"initial_state": "default2",
+			"states": {
+				"default2": {
+					"transitions": [
+						{
+							"default": "query.property('property:lock_id')!=0"
+						}
+					]
+				},
+				"default": {
+					"transitions": [
+						{
+							"checking": "query.property('property:lock_id')==0"
+						}
+					]
+				},
+				"checking": {
+					"transitions": [
+						{
+							"north": "query.property('property:chest_facing')==0"
+						},
+						{
+							"south": "query.property('property:chest_facing')==1"
+						},
+						{
+							"west": "query.property('property:chest_facing')==2"
+						},
+						{
+							"east": "query.property('property:chest_facing')==3"
+						}
+					]
+				},
+				"north": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:normal_emerald_chest_block [\"chest:facing\":1,\"chest:command_used\":1,\"chest:is_placed\":1] replace"
+					],
+					"transitions": [
+						{
+							"default": "q.property('property:lock_id')!=0"
+						}
+					]
+				},
+				"south": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:normal_emerald_chest_block [\"chest:facing\":0,\"chest:command_used\":1,\"chest:is_placed\":1] replace"
+					],
+					"transitions": [
+						{
+							"default": "q.property('property:lock_id')!=0"
+						}
+					]
+				},
+				"west": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:normal_emerald_chest_block [\"chest:facing\":3,\"chest:command_used\":1,\"chest:is_placed\":1] replace"
+					],
+					"transitions": [
+						{
+							"default": "q.property('property:lock_id')!=0"
+						}
+					]
+				},
+				"east": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:normal_emerald_chest_block [\"chest:facing\":2,\"chest:command_used\":1,\"chest:is_placed\":1] replace"
+					],
+					"transitions": [
+						{
+							"default": "q.property('property:lock_id')!=0"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.chest.replace_normal_diamond_block": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"checking": "query.property('property:lock_id')"
+						}
+					]
+				},
+				"checking": {
+					"transitions": [
+						{
+							"north": "query.property('property:chest_facing')==0"
+						},
+						{
+							"south": "query.property('property:chest_facing')==1"
+						},
+						{
+							"west": "query.property('property:chest_facing')==2"
+						},
+						{
+							"east": "query.property('property:chest_facing')==3"
+						}
+					]
+				},
+				"north": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:locked_diamond_chest_block [\"chest:facing\":1] replace"
+					],
+					"transitions": [
+						{
+							"default": "!query.property('property:lock_id')"
+						}
+					]
+				},
+				"south": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:locked_diamond_chest_block [\"chest:facing\":0] replace"
+					],
+					"transitions": [
+						{
+							"default": "!query.property('property:lock_id')"
+						}
+					]
+				},
+				"west": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:locked_diamond_chest_block [\"chest:facing\":3] replace"
+					],
+					"transitions": [
+						{
+							"default": "!query.property('property:lock_id')"
+						}
+					]
+				},
+				"east": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:locked_diamond_chest_block [\"chest:facing\":2] replace"
+					],
+					"transitions": [
+						{
+							"default": "!query.property('property:lock_id')"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.chest.replace_strong_diamond_block": {
+			"initial_state": "default2",
+			"states": {
+				"default2": {
+					"transitions": [
+						{
+							"default": "query.property('property:lock_id')!=0"
+						}
+					]
+				},
+				"default": {
+					"transitions": [
+						{
+							"checking": "query.property('property:lock_id')==0"
+						}
+					]
+				},
+				"checking": {
+					"transitions": [
+						{
+							"north": "query.property('property:chest_facing')==0"
+						},
+						{
+							"south": "query.property('property:chest_facing')==1"
+						},
+						{
+							"west": "query.property('property:chest_facing')==2"
+						},
+						{
+							"east": "query.property('property:chest_facing')==3"
+						}
+					]
+				},
+				"north": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:normal_diamond_chest_block [\"chest:facing\":1,\"chest:command_used\":1,\"chest:is_placed\":1] replace"
+					],
+					"transitions": [
+						{
+							"default": "q.property('property:lock_id')!=0"
+						}
+					]
+				},
+				"south": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:normal_diamond_chest_block [\"chest:facing\":0,\"chest:command_used\":1,\"chest:is_placed\":1] replace"
+					],
+					"transitions": [
+						{
+							"default": "q.property('property:lock_id')!=0"
+						}
+					]
+				},
+				"west": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:normal_diamond_chest_block [\"chest:facing\":3,\"chest:command_used\":1,\"chest:is_placed\":1] replace"
+					],
+					"transitions": [
+						{
+							"default": "q.property('property:lock_id')!=0"
+						}
+					]
+				},
+				"east": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:normal_diamond_chest_block [\"chest:facing\":2,\"chest:command_used\":1,\"chest:is_placed\":1] replace"
+					],
+					"transitions": [
+						{
+							"default": "q.property('property:lock_id')!=0"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.chest.replace_normal_netherite_block": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"checking": "query.property('property:lock_id')"
+						}
+					]
+				},
+				"checking": {
+					"transitions": [
+						{
+							"north": "query.property('property:chest_facing')==0"
+						},
+						{
+							"south": "query.property('property:chest_facing')==1"
+						},
+						{
+							"west": "query.property('property:chest_facing')==2"
+						},
+						{
+							"east": "query.property('property:chest_facing')==3"
+						}
+					]
+				},
+				"north": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:locked_netherite_chest_block [\"chest:facing\":1] replace"
+					],
+					"transitions": [
+						{
+							"default": "!query.property('property:lock_id')"
+						}
+					]
+				},
+				"south": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:locked_netherite_chest_block [\"chest:facing\":0] replace"
+					],
+					"transitions": [
+						{
+							"default": "!query.property('property:lock_id')"
+						}
+					]
+				},
+				"west": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:locked_netherite_chest_block [\"chest:facing\":3] replace"
+					],
+					"transitions": [
+						{
+							"default": "!query.property('property:lock_id')"
+						}
+					]
+				},
+				"east": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:locked_netherite_chest_block [\"chest:facing\":2] replace"
+					],
+					"transitions": [
+						{
+							"default": "!query.property('property:lock_id')"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.chest.replace_strong_netherite_block": {
+			"initial_state": "default2",
+			"states": {
+				"default2": {
+					"transitions": [
+						{
+							"default": "query.property('property:lock_id')!=0"
+						}
+					]
+				},
+				"default": {
+					"transitions": [
+						{
+							"checking": "query.property('property:lock_id')==0"
+						}
+					]
+				},
+				"checking": {
+					"transitions": [
+						{
+							"north": "query.property('property:chest_facing')==0"
+						},
+						{
+							"south": "query.property('property:chest_facing')==1"
+						},
+						{
+							"west": "query.property('property:chest_facing')==2"
+						},
+						{
+							"east": "query.property('property:chest_facing')==3"
+						}
+					]
+				},
+				"north": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:normal_netherite_chest_block [\"chest:facing\":1,\"chest:command_used\":1,\"chest:is_placed\":1] replace"
+					],
+					"transitions": [
+						{
+							"default": "q.property('property:lock_id')!=0"
+						}
+					]
+				},
+				"south": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:normal_netherite_chest_block [\"chest:facing\":0,\"chest:command_used\":1,\"chest:is_placed\":1] replace"
+					],
+					"transitions": [
+						{
+							"default": "q.property('property:lock_id')!=0"
+						}
+					]
+				},
+				"west": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:normal_netherite_chest_block [\"chest:facing\":3,\"chest:command_used\":1,\"chest:is_placed\":1] replace"
+					],
+					"transitions": [
+						{
+							"default": "q.property('property:lock_id')!=0"
+						}
+					]
+				},
+				"east": {
+					"on_entry": [
+						"/setblock ~ ~ ~ extra_chests:normal_netherite_chest_block [\"chest:facing\":2,\"chest:command_used\":1,\"chest:is_placed\":1] replace"
+					],
+					"transitions": [
+						{
+							"default": "q.property('property:lock_id')!=0"
+						}
+					]
+				}
+			}
+		}
+	}
+}
